@@ -1,0 +1,1085 @@
+{
+  "navigation": [
+    { "id": "new_arrivals", "name": "New Arrivals" },
+    { "id": "best_sellers", "name": "Best Sellers" },
+    { "id": "casual", "name": "Casual" },
+    { "id": "party", "name": "Party" },
+    { "id": "gym", "name": "Gym" },
+    { "id": "formal", "name": "Formal" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic White Tee",
+      "type": "shirt",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "rating": 4.5,
+      "reviews": 128,
+      "stock": 50,
+      "nav": ["new_arrivals", "casual"],
+      "description": "A timeless classic white t-shirt made from 100% premium cotton. Perfect for everyday wear.",
+      "colors": [
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 2,
+      "name": "Oversized Graphic Tee",
+      "type": "shirt",
+      "price": 34.99,
+      "originalPrice": 34.99,
+      "rating": 4.7,
+      "reviews": 94,
+      "stock": 35,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Relaxed oversized fit graphic tee. Bold prints, soft fabric, effortlessly cool.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600", "https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 3,
+      "name": "Cargo Shorts",
+      "type": "shorts",
+      "price": 49.99,
+      "originalPrice": 64.99,
+      "rating": 4.4,
+      "reviews": 112,
+      "stock": 40,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Multi-pocket cargo shorts built for utility and style. Perfect for outdoor adventures.",
+      "colors": [
+        { "name": "Khaki", "hex": "#C3B091", "images": ["https://images.unsplash.com/photo-1565084888279-aca607bb2a43?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 4,
+      "name": "Pullover Hoodie",
+      "type": "hoodie",
+      "price": 64.99,
+      "originalPrice": 79.99,
+      "rating": 4.9,
+      "reviews": 315,
+      "stock": 45,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Ultra-soft fleece pullover hoodie. Cozy, warm, and perfect for layering.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 5,
+      "name": "Jogger Sweatpants",
+      "type": "pants",
+      "price": 54.99,
+      "originalPrice": 54.99,
+      "rating": 4.7,
+      "reviews": 267,
+      "stock": 55,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Comfortable tapered jogger sweatpants with elastic waistband and cuffed ankles.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600", "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 6,
+      "name": "Henley Long Sleeve",
+      "type": "shirt",
+      "price": 39.99,
+      "originalPrice": 49.99,
+      "rating": 4.4,
+      "reviews": 76,
+      "stock": 30,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Classic henley long sleeve with a relaxed fit. Perfect for layering or wearing solo.",
+      "colors": [
+        { "name": "Heather Gray", "hex": "#B0B0B0", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] },
+        { "name": "Burgundy", "hex": "#800020", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 7,
+      "name": "Linen Casual Shorts",
+      "type": "shorts",
+      "price": 42.99,
+      "originalPrice": 42.99,
+      "rating": 4.5,
+      "reviews": 67,
+      "stock": 35,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Lightweight linen shorts perfect for beach days and casual outings.",
+      "colors": [
+        { "name": "Sand", "hex": "#C2B280", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600"] },
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1565084888279-aca607bb2a43?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 8,
+      "name": "Zip-Up Hoodie",
+      "type": "hoodie",
+      "price": 69.99,
+      "originalPrice": 69.99,
+      "rating": 4.6,
+      "reviews": 189,
+      "stock": 30,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Full zip hoodie with two front pockets. Lightweight yet warm for transitional weather.",
+      "colors": [
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Burgundy", "hex": "#800020", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] },
+        { "name": "Sand", "hex": "#C2B280", "images": ["https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600", "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 9,
+      "name": "Wide Leg Casual Pants",
+      "type": "pants",
+      "price": 62.99,
+      "originalPrice": 74.99,
+      "rating": 4.5,
+      "reviews": 119,
+      "stock": 32,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Relaxed wide-leg pants in soft fabric. Contemporary silhouette for everyday styling.",
+      "colors": [
+        { "name": "Cream", "hex": "#FFFDD0", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 10,
+      "name": "Casual Pocket Tee",
+      "type": "shirt",
+      "price": 27.99,
+      "originalPrice": 27.99,
+      "rating": 4.3,
+      "reviews": 88,
+      "stock": 60,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Simple and clean pocket tee in soft jersey fabric. An everyday essential.",
+      "colors": [
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] },
+        { "name": "Rust", "hex": "#B7410E", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] },
+        { "name": "Slate Blue", "hex": "#6A7FDB", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 11,
+      "name": "Swim Shorts",
+      "type": "shorts",
+      "price": 34.99,
+      "originalPrice": 44.99,
+      "rating": 4.6,
+      "reviews": 139,
+      "stock": 50,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Quick-dry swim shorts with elastic waistband and drawstring. Beach and pool ready.",
+      "colors": [
+        { "name": "Tropical Blue", "hex": "#00CED1", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] },
+        { "name": "Orange", "hex": "#FF8C00", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 12,
+      "name": "Oversized Vintage Hoodie",
+      "type": "hoodie",
+      "price": 72.99,
+      "originalPrice": 72.99,
+      "rating": 4.7,
+      "reviews": 158,
+      "stock": 33,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Chunky oversized vintage-washed hoodie. Effortlessly cool with a lived-in feel.",
+      "colors": [
+        { "name": "Washed Black", "hex": "#2F2F2F", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Washed Blue", "hex": "#5B7FA6", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Washed Green", "hex": "#5D7A5D", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 13,
+      "name": "Cargo Pants",
+      "type": "pants",
+      "price": 67.99,
+      "originalPrice": 67.99,
+      "rating": 4.6,
+      "reviews": 203,
+      "stock": 42,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Relaxed cargo pants with multiple utility pockets. Urban-inspired street style.",
+      "colors": [
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Khaki", "hex": "#C3B091", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 14,
+      "name": "Relaxed Linen Tee",
+      "type": "shirt",
+      "price": 37.99,
+      "originalPrice": 37.99,
+      "rating": 4.4,
+      "reviews": 61,
+      "stock": 33,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Breathable linen tee with a relaxed drop-shoulder fit. Summer essential.",
+      "colors": [
+        { "name": "Sand", "hex": "#C2B280", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Terracotta", "hex": "#E2725B", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 15,
+      "name": "Denim Shorts",
+      "type": "shorts",
+      "price": 39.99,
+      "originalPrice": 39.99,
+      "rating": 4.2,
+      "reviews": 88,
+      "stock": 30,
+      "nav": ["new_arrivals", "casual"],
+      "description": "Classic denim shorts with a relaxed fit. A wardrobe staple for summer.",
+      "colors": [
+        { "name": "Light Blue", "hex": "#ADD8E6", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Dark Blue", "hex": "#00008B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"]
+    },
+    {
+      "id": 16,
+      "name": "Dry-Fit Training Shirt",
+      "type": "shirt",
+      "price": 29.99,
+      "originalPrice": 29.99,
+      "rating": 4.8,
+      "reviews": 241,
+      "stock": 70,
+      "nav": ["best_sellers", "gym"],
+      "description": "Moisture-wicking dry-fit shirt designed for intense workouts. Lightweight and breathable.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Electric Blue", "hex": "#0066FF", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] },
+        { "name": "Neon Green", "hex": "#39FF14", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 17,
+      "name": "Athletic Running Shorts",
+      "type": "shorts",
+      "price": 32.99,
+      "originalPrice": 32.99,
+      "rating": 4.8,
+      "reviews": 203,
+      "stock": 60,
+      "nav": ["best_sellers", "gym"],
+      "description": "Lightweight moisture-wicking running shorts with built-in liner. Designed for performance.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 18,
+      "name": "Tech Fleece Hoodie",
+      "type": "hoodie",
+      "price": 84.99,
+      "originalPrice": 99.99,
+      "rating": 4.8,
+      "reviews": 209,
+      "stock": 28,
+      "nav": ["best_sellers", "gym"],
+      "description": "Engineered tech fleece hoodie with slim fit and heat-retaining fabric. Performance meets style.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Dark Gray", "hex": "#A9A9A9", "images": ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1603251578711-3290ca1a0187?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 19,
+      "name": "Compression Gym Pants",
+      "type": "pants",
+      "price": 49.99,
+      "originalPrice": 49.99,
+      "rating": 4.8,
+      "reviews": 198,
+      "stock": 50,
+      "nav": ["best_sellers", "gym"],
+      "description": "High-performance compression pants for training. Four-way stretch with moisture control.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600", "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 20,
+      "name": "Compression Gym Shirt",
+      "type": "shirt",
+      "price": 34.99,
+      "originalPrice": 44.99,
+      "rating": 4.7,
+      "reviews": 187,
+      "stock": 55,
+      "nav": ["best_sellers", "gym"],
+      "description": "Tight-fit compression shirt that supports muscles during heavy lifting sessions.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 21,
+      "name": "Crossfit Training Shorts",
+      "type": "shorts",
+      "price": 38.99,
+      "originalPrice": 48.99,
+      "rating": 4.8,
+      "reviews": 176,
+      "stock": 45,
+      "nav": ["best_sellers", "gym"],
+      "description": "Flexible crossfit shorts with stretch fabric and secure waistband. Built for any WOD.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Cobalt Blue", "hex": "#0047AB", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 22,
+      "name": "Gym Zip Hoodie",
+      "type": "hoodie",
+      "price": 59.99,
+      "originalPrice": 59.99,
+      "rating": 4.7,
+      "reviews": 174,
+      "stock": 40,
+      "nav": ["best_sellers", "gym"],
+      "description": "Lightweight zip-up hoodie designed for the gym. Quick-dry fabric with a fitted cut.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Electric Blue", "hex": "#0066FF", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 23,
+      "name": "Track Pants",
+      "type": "pants",
+      "price": 44.99,
+      "originalPrice": 54.99,
+      "rating": 4.7,
+      "reviews": 176,
+      "stock": 48,
+      "nav": ["best_sellers", "gym"],
+      "description": "Classic track pants with contrast side stripes and tapered fit. Gym to street ready.",
+      "colors": [
+        { "name": "Black/White", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Navy/White", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Red/White", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 24,
+      "name": "Mesh Gym Tank",
+      "type": "shirt",
+      "price": 24.99,
+      "originalPrice": 24.99,
+      "rating": 4.6,
+      "reviews": 163,
+      "stock": 80,
+      "nav": ["best_sellers", "gym"],
+      "description": "Ultra-breathable mesh tank top for intense gym sessions. Keeps you cool and moving.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 25,
+      "name": "Tapered Gym Pants",
+      "type": "pants",
+      "price": 52.99,
+      "originalPrice": 64.99,
+      "rating": 4.8,
+      "reviews": 231,
+      "stock": 52,
+      "nav": ["best_sellers", "gym"],
+      "description": "Tapered fit gym pants with four-way stretch and zippered pockets. Performance guaranteed.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600", "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 26,
+      "name": "Weightlifting Hoodie",
+      "type": "hoodie",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4.8,
+      "reviews": 162,
+      "stock": 36,
+      "nav": ["best_sellers", "gym"],
+      "description": "Heavy-duty weightlifting hoodie with kangaroo pocket and reinforced seams.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 27,
+      "name": "Bike Shorts",
+      "type": "shorts",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "rating": 4.7,
+      "reviews": 144,
+      "stock": 55,
+      "nav": ["best_sellers", "gym"],
+      "description": "Sleek compression bike shorts for cycling and gym use. Anti-chafe and supportive.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 28,
+      "name": "Athletic Muscle Tank",
+      "type": "shirt",
+      "price": 22.99,
+      "originalPrice": 29.99,
+      "rating": 4.7,
+      "reviews": 215,
+      "stock": 90,
+      "nav": ["best_sellers", "gym"],
+      "description": "Slim-fit muscle tank with deep armholes. Designed to show off your hard work at the gym.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 29,
+      "name": "Sweat Jogger Pants",
+      "type": "pants",
+      "price": 47.99,
+      "originalPrice": 57.99,
+      "rating": 4.7,
+      "reviews": 189,
+      "stock": 60,
+      "nav": ["best_sellers", "gym"],
+      "description": "Premium sweat jogger with brushed interior. Warm, cozy, and gym-approved.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600", "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600", "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600", "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 30,
+      "name": "Running Hoodie",
+      "type": "hoodie",
+      "price": 64.99,
+      "originalPrice": 79.99,
+      "rating": 4.7,
+      "reviews": 143,
+      "stock": 32,
+      "nav": ["best_sellers", "gym"],
+      "description": "Reflective running hoodie with thumbholes and wind-resistant shell. Run further, faster.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Cobalt", "hex": "#0047AB", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Neon Orange", "hex": "#FF4500", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 31,
+      "name": "Satin Party Shirt",
+      "type": "shirt",
+      "price": 59.99,
+      "originalPrice": 74.99,
+      "rating": 4.5,
+      "reviews": 58,
+      "stock": 18,
+      "nav": ["party"],
+      "description": "Luxurious satin finish shirt perfect for nights out and parties. Effortlessly stylish.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] },
+        { "name": "Champagne", "hex": "#F7E7CE", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Deep Purple", "hex": "#4B0082", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 32,
+      "name": "Party Mesh Shorts",
+      "type": "shorts",
+      "price": 37.99,
+      "originalPrice": 37.99,
+      "rating": 4.3,
+      "reviews": 49,
+      "stock": 22,
+      "nav": ["party"],
+      "description": "Trendy mesh shorts with a relaxed party-ready fit. Stand out at any event.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] },
+        { "name": "Electric Blue", "hex": "#0066FF", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 33,
+      "name": "Party Hoodie",
+      "type": "hoodie",
+      "price": 74.99,
+      "originalPrice": 89.99,
+      "rating": 4.5,
+      "reviews": 63,
+      "stock": 20,
+      "nav": ["party"],
+      "description": "Bold graphic party hoodie with premium fleece lining. Make a statement at any event.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Deep Purple", "hex": "#4B0082", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 34,
+      "name": "Slim Party Trousers",
+      "type": "pants",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4.6,
+      "reviews": 81,
+      "stock": 18,
+      "nav": ["party"],
+      "description": "Sleek slim-fit trousers perfect for parties and nights out. Sharp, modern cut.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Deep Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36"]
+    },
+    {
+      "id": 35,
+      "name": "Sequin Party Shirt",
+      "type": "shirt",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4.4,
+      "reviews": 39,
+      "stock": 12,
+      "nav": ["party"],
+      "description": "Eye-catching sequin shirt that shines at every party. Bold and unapologetically fun.",
+      "colors": [
+        { "name": "Gold", "hex": "#FFD700", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Silver", "hex": "#C0C0C0", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 36,
+      "name": "Festival Shorts",
+      "type": "shorts",
+      "price": 44.99,
+      "originalPrice": 54.99,
+      "rating": 4.5,
+      "reviews": 63,
+      "stock": 28,
+      "nav": ["party"],
+      "description": "Bold printed festival shorts made for standing out. Lightweight and fun.",
+      "colors": [
+        { "name": "Tie Dye", "hex": "#FF69B4", "images": ["https://images.unsplash.com/photo-1565084888279-aca607bb2a43?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Neon Yellow", "hex": "#FFFF00", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 37,
+      "name": "Glitter Party Hoodie",
+      "type": "hoodie",
+      "price": 79.99,
+      "originalPrice": 94.99,
+      "rating": 4.4,
+      "reviews": 47,
+      "stock": 14,
+      "nav": ["party"],
+      "description": "Glitter-embellished party hoodie that catches every light. Be the life of the party.",
+      "colors": [
+        { "name": "Black/Gold", "hex": "#1A1A1A", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Pink/Silver", "hex": "#FF69B4", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 38,
+      "name": "Sequin Party Pants",
+      "type": "pants",
+      "price": 89.99,
+      "originalPrice": 109.99,
+      "rating": 4.4,
+      "reviews": 43,
+      "stock": 12,
+      "nav": ["party"],
+      "description": "Dazzling sequin pants for the ultimate party entrance. Bold and unforgettable.",
+      "colors": [
+        { "name": "Gold", "hex": "#FFD700", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Silver", "hex": "#C0C0C0", "images": ["https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600", "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"]
+    },
+    {
+      "id": 39,
+      "name": "Cuban Collar Party Shirt",
+      "type": "shirt",
+      "price": 54.99,
+      "originalPrice": 54.99,
+      "rating": 4.7,
+      "reviews": 71,
+      "stock": 16,
+      "nav": ["party"],
+      "description": "Retro-inspired Cuban collar shirt with bold floral print. A party wardrobe essential.",
+      "colors": [
+        { "name": "Black Floral", "hex": "#1A1A1A", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] },
+        { "name": "White Floral", "hex": "#F8F8F8", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Blue Floral", "hex": "#1E90FF", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 40,
+      "name": "Neon Party Shorts",
+      "type": "shorts",
+      "price": 34.99,
+      "originalPrice": 34.99,
+      "rating": 4.4,
+      "reviews": 57,
+      "stock": 20,
+      "nav": ["party"],
+      "description": "Glow in the crowd with these neon party shorts. Perfect for clubs and night events.",
+      "colors": [
+        { "name": "Neon Pink", "hex": "#FF1493", "images": ["https://images.unsplash.com/photo-1565084888279-aca607bb2a43?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] },
+        { "name": "Neon Green", "hex": "#39FF14", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] },
+        { "name": "Neon Orange", "hex": "#FF4500", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 41,
+      "name": "Rave Hoodie",
+      "type": "hoodie",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4.5,
+      "reviews": 59,
+      "stock": 18,
+      "nav": ["party"],
+      "description": "UV-reactive rave hoodie that glows under blacklights. Festival season essential.",
+      "colors": [
+        { "name": "White UV", "hex": "#F8F8FF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Pink UV", "hex": "#FF69B4", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 42,
+      "name": "Leather Look Party Pants",
+      "type": "pants",
+      "price": 79.99,
+      "originalPrice": 94.99,
+      "rating": 4.5,
+      "reviews": 67,
+      "stock": 14,
+      "nav": ["party"],
+      "description": "Faux leather slim-fit pants for an edgy party look. Bold and unapologetic.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"]
+    },
+    {
+      "id": 43,
+      "name": "Velvet Party Shirt",
+      "type": "shirt",
+      "price": 79.99,
+      "originalPrice": 99.99,
+      "rating": 4.6,
+      "reviews": 44,
+      "stock": 10,
+      "nav": ["party"],
+      "description": "Luxe velvet shirt with a slim cut. Makes a statement at any upscale party or event.",
+      "colors": [
+        { "name": "Emerald", "hex": "#50C878", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1603251578711-3290ca1a0187?w=600"] },
+        { "name": "Burgundy", "hex": "#800020", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] },
+        { "name": "Midnight Blue", "hex": "#191970", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 44,
+      "name": "Satin Wide Leg Party Pants",
+      "type": "pants",
+      "price": 74.99,
+      "originalPrice": 89.99,
+      "rating": 4.5,
+      "reviews": 54,
+      "stock": 16,
+      "nav": ["party"],
+      "description": "Flowy satin wide-leg pants that command attention at any party or event.",
+      "colors": [
+        { "name": "Champagne", "hex": "#F7E7CE", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Emerald", "hex": "#50C878", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1603251578711-3290ca1a0187?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"]
+    },
+    {
+      "id": 45,
+      "name": "Satin Shorts",
+      "type": "shorts",
+      "price": 42.99,
+      "originalPrice": 52.99,
+      "rating": 4.4,
+      "reviews": 38,
+      "stock": 16,
+      "nav": ["party"],
+      "description": "Silky satin shorts for a chic, party-ready look. Pairs perfectly with heels or sneakers.",
+      "colors": [
+        { "name": "Champagne", "hex": "#F7E7CE", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] },
+        { "name": "Red", "hex": "#FF0000", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"]
+    },
+    {
+      "id": 46,
+      "name": "Linen Button-Up Shirt",
+      "type": "shirt",
+      "price": 54.99,
+      "originalPrice": 54.99,
+      "rating": 4.6,
+      "reviews": 43,
+      "stock": 15,
+      "nav": ["formal"],
+      "description": "Lightweight linen button-up perfect for warm weather. Breathable and stylish.",
+      "colors": [
+        { "name": "Beige", "hex": "#F5F0E8", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Sky Blue", "hex": "#87CEEB", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] },
+        { "name": "Sage Green", "hex": "#8FAF8F", "images": ["https://images.unsplash.com/photo-1563630423918-b58f07336ac5?w=600", "https://images.unsplash.com/photo-1603251578711-3290ca1a0187?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 47,
+      "name": "Slim Fit Chino Pants",
+      "type": "pants",
+      "price": 59.99,
+      "originalPrice": 74.99,
+      "rating": 4.4,
+      "reviews": 142,
+      "stock": 35,
+      "nav": ["formal"],
+      "description": "Slim fit chino pants with stretch fabric for ultimate comfort. Smart casual essential.",
+      "colors": [
+        { "name": "Khaki", "hex": "#C3B091", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 48,
+      "name": "Chino Shorts",
+      "type": "shorts",
+      "price": 44.99,
+      "originalPrice": 54.99,
+      "rating": 4.5,
+      "reviews": 76,
+      "stock": 25,
+      "nav": ["formal"],
+      "description": "Smart chino shorts in a slim fit. Versatile enough for casual or semi-formal occasions.",
+      "colors": [
+        { "name": "Beige", "hex": "#F5F0E8", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600", "https://images.unsplash.com/photo-1565084888279-aca607bb2a43?w=600"] },
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600", "https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 49,
+      "name": "Formal Hoodie Blazer",
+      "type": "hoodie",
+      "price": 94.99,
+      "originalPrice": 114.99,
+      "rating": 4.6,
+      "reviews": 78,
+      "stock": 16,
+      "nav": ["formal"],
+      "description": "Hybrid hoodie-blazer for a smart-casual office look. Structured front, cozy hood.",
+      "colors": [
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Camel", "hex": "#C19A6B", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 50,
+      "name": "Striped Polo Shirt",
+      "type": "shirt",
+      "price": 44.99,
+      "originalPrice": 59.99,
+      "rating": 4.3,
+      "reviews": 67,
+      "stock": 20,
+      "nav": ["formal"],
+      "description": "Classic striped polo shirt with ribbed collar. Smart casual style for any occasion.",
+      "colors": [
+        { "name": "Blue/White", "hex": "#4A90E2", "images": ["https://images.unsplash.com/photo-1598032895455-31e98bb9b6bb?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] },
+        { "name": "Red/White", "hex": "#E24A4A", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600"] },
+        { "name": "Green/White", "hex": "#4AE27A", "images": ["https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=600", "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 51,
+      "name": "Suit Trousers",
+      "type": "pants",
+      "price": 79.99,
+      "originalPrice": 94.99,
+      "rating": 4.6,
+      "reviews": 88,
+      "stock": 24,
+      "nav": ["formal"],
+      "description": "Tailored suit trousers with a clean break. Professional-grade fabric and finish.",
+      "colors": [
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 52,
+      "name": "Tailored Dress Shorts",
+      "type": "shorts",
+      "price": 59.99,
+      "originalPrice": 74.99,
+      "rating": 4.4,
+      "reviews": 52,
+      "stock": 18,
+      "nav": ["formal"],
+      "description": "Tailored dress shorts for smart occasions. Clean lines and premium fabric.",
+      "colors": [
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36"]
+    },
+    {
+      "id": 53,
+      "name": "Smart Casual Hoodie",
+      "type": "hoodie",
+      "price": 79.99,
+      "originalPrice": 94.99,
+      "rating": 4.5,
+      "reviews": 83,
+      "stock": 20,
+      "nav": ["formal"],
+      "description": "Clean-cut smart hoodie with a structured silhouette. Office casual done right.",
+      "colors": [
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] },
+        { "name": "Stone", "hex": "#928E85", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] },
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 54,
+      "name": "Oxford Button-Down Shirt",
+      "type": "shirt",
+      "price": 64.99,
+      "originalPrice": 64.99,
+      "rating": 4.6,
+      "reviews": 103,
+      "stock": 25,
+      "nav": ["formal"],
+      "description": "Premium Oxford weave button-down shirt. Versatile enough for work or weekend.",
+      "colors": [
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Light Blue", "hex": "#ADD8E6", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] },
+        { "name": "Pink", "hex": "#FFB6C1", "images": ["https://images.unsplash.com/photo-1598032895455-31e98bb9b6bb?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 55,
+      "name": "Smart Stretch Trousers",
+      "type": "pants",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4.6,
+      "reviews": 108,
+      "stock": 28,
+      "nav": ["formal"],
+      "description": "Stretch-blend smart trousers that move with you. Ideal for long office days.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 56,
+      "name": "Pleated Formal Shorts",
+      "type": "shorts",
+      "price": 54.99,
+      "originalPrice": 54.99,
+      "rating": 4.3,
+      "reviews": 41,
+      "stock": 15,
+      "nav": ["formal"],
+      "description": "Classic pleated shorts for a polished smart-casual look. Office-ready and stylish.",
+      "colors": [
+        { "name": "Khaki", "hex": "#C3B091", "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600", "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600"] },
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 57,
+      "name": "Formal Quarter Zip",
+      "type": "hoodie",
+      "price": 84.99,
+      "originalPrice": 99.99,
+      "rating": 4.7,
+      "reviews": 91,
+      "stock": 18,
+      "nav": ["formal"],
+      "description": "Quarter-zip pullover in premium knit fabric. The perfect smart casual layer.",
+      "colors": [
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600"] },
+        { "name": "Burgundy", "hex": "#800020", "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600", "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1578768079052-aa76e52ff3ef?w=600", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 58,
+      "name": "Formal Dress Shirt",
+      "type": "shirt",
+      "price": 74.99,
+      "originalPrice": 89.99,
+      "rating": 4.8,
+      "reviews": 124,
+      "stock": 22,
+      "nav": ["formal"],
+      "description": "Crisp formal dress shirt with French cuffs. Tailored for a sharp professional look.",
+      "colors": [
+        { "name": "White", "hex": "#FFFFFF", "images": ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"] },
+        { "name": "Light Blue", "hex": "#ADD8E6", "images": ["https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600", "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600"] },
+        { "name": "Charcoal", "hex": "#36454F", "images": ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600", "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"] }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 59,
+      "name": "Pleated Dress Pants",
+      "type": "pants",
+      "price": 84.99,
+      "originalPrice": 99.99,
+      "rating": 4.5,
+      "reviews": 71,
+      "stock": 20,
+      "nav": ["formal"],
+      "description": "Classic pleated dress pants with a relaxed high-rise fit. Sophisticated and timeless.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Gray", "hex": "#808080", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] },
+        { "name": "Camel", "hex": "#C19A6B", "images": ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600", "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"]
+    },
+    {
+      "id": 60,
+      "name": "Stretch Formal Shorts",
+      "type": "shorts",
+      "price": 49.99,
+      "originalPrice": 59.99,
+      "rating": 4.5,
+      "reviews": 48,
+      "stock": 20,
+      "nav": ["formal"],
+      "description": "Stretch-fabric formal shorts that combine comfort with a polished look.",
+      "colors": [
+        { "name": "Black", "hex": "#000000", "images": ["https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600", "https://images.unsplash.com/photo-1612384928832-a8e9f8e78a12?w=600"] },
+        { "name": "Navy", "hex": "#001F5B", "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600", "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600"] },
+        { "name": "Olive", "hex": "#556B2F", "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600", "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600"] }
+      ],
+      "sizes": ["28", "30", "32", "34", "36"]
+    }
+  ]
+}
