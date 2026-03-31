@@ -251,7 +251,7 @@ export default function Home() {
             :
               arrivalsProducts.map((product, index) => (
                 <AnimatedCard key={product.id} index={index}>
-                  <div className="flex flex-col gap-5 w-49.5">
+                  <Link href={`/arrivals/${product.id}`} className="flex flex-col gap-5 w-49.5">
                     <div className="bg-[#F0EEED] w-full h-49.5 rounded-[13.42px] flex items-center justify-center overflow-hidden">
                       <img
                         src={product.thumbnail}
@@ -264,7 +264,7 @@ export default function Home() {
                       <StarRating rating={product.rating} />
                       <p className="font-bold text-xl">${product.price}</p>
                     </div>
-                  </div>
+                  </Link>
                 </AnimatedCard>
               ))
             }
@@ -292,7 +292,7 @@ export default function Home() {
           : 
             arrivalsProducts.map((product, index) => (
               <AnimatedCard key={product.id} index={index}>
-                <div className="flex flex-col gap-5">
+                <Link href={`/arrivals/${product.id}`} className="flex flex-col gap-5">
                   <div className="bg-[#F0EEED] w-full h-50 rounded-[13.42px] lg:h-74.5 lg:rounded-[20px] flex items-center justify-center overflow-hidden">
                     <img 
                       src={product.thumbnail} 
@@ -306,7 +306,7 @@ export default function Home() {
                     <StarRating rating={product.rating} />
                     <p className="font-bold text-xl lg:text-2xl">${product.price}</p>
                   </div>
-                </div>
+                </Link>
               </AnimatedCard>
             ))
           }
@@ -346,7 +346,7 @@ export default function Home() {
             :
               sellingProducts.map((product, index) => (
                 <AnimatedCard key={product.id} index={index}>
-                  <div className="flex flex-col gap-5 w-49.5">
+                  <Link href={`/topSelling/${product.id}`} className="flex flex-col gap-5 w-49.5">
                     <div className="bg-[#F0EEED] w-full h-50 rounded-[13.42px] flex items-center justify-center overflow-hidden">
                       <img
                         src={product.thumbnail}
@@ -359,7 +359,7 @@ export default function Home() {
                       <StarRating rating={product.rating} />
                       <p className="font-bold text-xl">${product.price}</p>
                     </div>
-                  </div>
+                  </Link>
                 </AnimatedCard>
               ))
             }
@@ -387,7 +387,7 @@ export default function Home() {
           : 
             sellingProducts.map((product, index) => (
               <AnimatedCard key={product.id} index={index}>
-                <div className="flex flex-col gap-5">
+                <Link href={`/topSelling/${product.id}`} className="flex flex-col gap-5">
                   <div className="bg-[#F0EEED] w-full h-50 rounded-[13.42px] lg:h-74.5 lg:rounded-[20px] flex items-center justify-center overflow-hidden">
                     <img 
                       src={product.thumbnail} 
@@ -401,13 +401,13 @@ export default function Home() {
                     <StarRating rating={product.rating} />
                     <p className="font-bold text-xl lg:text-2xl">${product.price}</p>
                   </div>
-                </div>
+                </Link>
               </AnimatedCard>
             ))
           }
         </div>
 
-        <button className="border border-black/10 py-4 w-full h-11.5 lg:w-54.5 lg:h-13 rounded-[62px] flex items-center justify-center hover:bg-black/10 transition-colors duration-300">
+        <button onClick={() => router.push("/topSelling")} className="border border-black/10 py-4 w-full h-11.5 lg:w-54.5 lg:h-13 rounded-[62px] flex items-center justify-center hover:bg-black/10 transition-colors duration-300">
           <p className="font-medium text-sm lg:text-base">View All</p>
         </button>
 

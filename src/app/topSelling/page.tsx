@@ -1,15 +1,15 @@
 "use client"
 import ProductListPage from "@/components/ProductListPage";
-import { useArrivals } from "@/hooks/useArrivals";
+import { useTopSelling } from "@/hooks/useTopSelling";
 
 export default function Page() {
-  const { allProducts, isLoading, currentPage, setCurrentPage } = useArrivals();
+  const { allProducts, isLoading, currentPage, setCurrentPage } = useTopSelling();
   return (
     <ProductListPage
-      title="New Arrivals"
-      breadcrumb="New Arrivals"
-      href="/arrivals"
-      detailHref="/arrivals"
+      title="Top Selling"
+      breadcrumb="Top Selling"
+      href="/topSelling"
+      detailHref="/topSelling"
       allProducts={allProducts}
       isLoading={isLoading}
       currentPage={currentPage}

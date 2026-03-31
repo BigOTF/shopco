@@ -113,6 +113,7 @@ export default function Header() {
                         </button>
                         
                         <Image 
+                            onClick={() => router.push("/")}
                             src={"/images/brand.png"}
                             alt="brand"
                             width={126}
