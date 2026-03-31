@@ -4,12 +4,17 @@ import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image"
+import { useRouter } from "next/navigation";
+import { useApp } from "@/context/AppContext";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [shopOpen, setShopOpen] = useState(false);
     const [search, setSearch] = useState("")
+    const router = useRouter()
+    const { state } = useApp();
+    const cartCount = state.cart.reduce((total, item) => total + item.quantity, 0);
 
     const shopItems = [
         { label: "Shirt", href: "/shirt" },
@@ -17,15 +22,17 @@ export default function Header() {
         { label: "Shorts", href: "/shorts" },
     ]
     return (
-        <header className="max-w-360 w-full px-7 py-5 lg:py-7 lg:px-25 sticky top-0 z-30 bg-white">
+        <header className="max-w-360 w-full px-7 py-5 lg:py-7 lg:px-25 sticky top-0 z-30 bg-white border-b border-black/10">
             {/* Large screen */}
             <div className="w-full h-12 lg:flex items-center lg:gap-10 hidden">
-                <Image 
-                    src={"/images/brand.png"}
-                    alt="brand"
-                    width={160}
-                    height={22}
-                />
+                <button onClick={() => router.push("/")}>
+                    <Image 
+                        src={"/images/brand.png"}
+                        alt="brand"
+                        width={160}
+                        height={22}
+                    />
+                </button>
 
                 <nav className="flex items-center gap-6">
                     <div
@@ -82,8 +89,13 @@ export default function Header() {
                 </div> 
 
                 <div className="flex items-center gap-3.5">
-                    <button>
+                    <button className="relative">
                         <Icon icon="mdi:cart-outline" width="24" height="24" color="black" />
+                        {cartCount > 0 && (
+                            <span className="absolute -top-1 -right-1 w-4 h-4 bg-black text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                                {cartCount}
+                            </span>
+                        )}
                     </button>
 
                     <button>
@@ -113,8 +125,13 @@ export default function Header() {
                             <Icon icon="cuida:search-outline" width="24" height="24" color="black" />
                         </button>
 
-                        <button>
+                        <button className="relative">
                             <Icon icon="mdi:cart-outline" width="24" height="24" color="black" />
+                            {cartCount > 0 && (
+                                <span className="absolute -top-1 -right-1 w-4 h-4 bg-black text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                                {cartCount}
+                                </span>
+                            )}
                         </button>
 
                         <button>

@@ -3,6 +3,8 @@ import { DM_Sans, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import AdvertBanner from "@/components/AdvertBanner";
 import Header from "@/components/Header/Header";
+import { AppProvider } from "@/context/AppContext";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -37,9 +39,12 @@ export default function RootLayout({
       className={`${dmSans.variable} ${bebasNeue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <AdvertBanner />
-        <Header />
-        {children}
+        <AppProvider>
+          <AdvertBanner />
+          <Header />
+          {children}
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

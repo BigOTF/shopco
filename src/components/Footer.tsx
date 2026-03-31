@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react"
 import { Icon } from "@iconify/react"
 import Link from "next/link"
@@ -46,6 +47,7 @@ export default function Footer() {
                                     { icon: "codicon:twitter", link: "https://x.com/Olamide957" },
                                     { icon: "mingcute:notion-line", link: "https://www.notion.so/Olamide-Olorunfemi-Frontend-Developer-Portfolio-2f896db40b2081b0a4a1d2e94d5a01fb?p=2f896db40b2081fd892dd53dcd0d4b3b&pm=c" },
                                     { icon: "mdi:github", link: "https://github.com/BigOTF" },
+                                    { icon: "line-md:linkedin", link: "https://www.linkedin.com/in/olorunfemi-olamide-9b4037222/" },
                                 ].map((i, index) => (
                                     <Link target="_blank" rel="noopener noreferrer" href={i.link} key={index} className="px-3 py-3 border border-black/20 flex items-center justify-center rounded-full bg-white hover:bg-black text-black hover:text-white transition-colors duration-300">
                                         <Icon icon={i.icon} width="24" height="24" />
@@ -113,7 +115,7 @@ export default function Footer() {
 
                 <div className="flex flex-col items-center justify-center gap-4 lg:gap-0 lg:flex-row lg:justify-between mt-6 lg:mt-8">
                     <div className="flex flex-col items-center lg:items-start gap-2">
-                        <p className="text-sm text-black/60">Shop.co &copy; 2000-2023, All Rights Reserved</p>
+                        <p className="text-sm text-black/60">Shop.co &copy; 2026, All Rights Reserved</p>
                         <p className="text-sm text-black/60"> Developed by{" "}
                             <Link target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Olamide-Olorunfemi-Frontend-Developer-Portfolio-2f896db40b2081b0a4a1d2e94d5a01fb?p=2f896db40b2081fd892dd53dcd0d4b3b&pm=c">
                                 Big_O

@@ -8,7 +8,8 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion, useAnimationControls, useMotionValue, animate } from "framer-motion";
 import Link from "next/link";
-import Footer from "@/components/Footer"
+import { useRouter } from "next/navigation"
+import StarRating from "@/components/UI/StarRating"
 
 interface Product {
   id: number;
@@ -20,12 +21,6 @@ interface Product {
 }
 
 const INITIAL_COUNT = 4;
-const LOAD_MORE_COUNT = 8;
-
-const getRating = (id: number) => {
-  const ratings = [4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0];
-  return ratings[id % ratings.length];
-};
 
 const testimonials = [
   { name: "Sarah M.",  text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.", rating: 5 },
@@ -45,7 +40,7 @@ const TestimonialCard = ({ name, text, rating }: { name: string; text: string; r
     <div className="flex flex-col gap-3 lg:gap-3.75">
       <div className="flex gap-1">
         {Array.from({ length: rating }).map((_, i) => (
-          <span key={i} className="text-yellow-400 text-[22px]">★</span>
+          <span key={i} className="text-[#FFC633] text-[22px]">★</span>
         ))}
       </div>
 
@@ -61,27 +56,6 @@ const TestimonialCard = ({ name, text, rating }: { name: string; text: string; r
   </div>
 );
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-1">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill={star <= Math.round(rating) ? "#FFC633" : "none"}
-          stroke="#FFC633"
-          strokeWidth="1.5"
-        >
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      ))}
-      <span className="text-sm font-medium">{rating}/5</span>
-    </div>
-  );
-}
-
 export default function Home() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [newArrivals, setNewArrivals] = useState<Product[]>([])
@@ -94,6 +68,25 @@ export default function Home() {
   const [dragWidth, setDragWidth] = useState(0);
   const controls1 = useAnimationControls();
   const controls2 = useAnimationControls();
+  const router = useRouter()
+
+  // Seeded random — same seed = same shuffle
+  const seededShuffle = <T,>(arr: T[], seed: number): T[] => {
+    const shuffled = [...arr];
+    let s = seed;
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      s = (s * 1664525 + 1013904223) & 0xffffffff;
+      const j = Math.abs(s) % (i + 1);
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Seed based on today's date — changes daily, stable within the day
+  const getDailySeed = () => {
+    const today = new Date();
+    return today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -108,45 +101,25 @@ export default function Home() {
         "sunglasses",
       ];
 
-      const arrivalsCategories = [
-        "womens-dresses",
-        "mens-shirts",
-        "tops",
-      ];
-
-      const topSellingCategories = [
-        "womens-shoes",
-        "mens-shoes",
-        "womens-bags",
-        "womens-jewellery",
-        "sunglasses",
-      ];
-
       const responses = await Promise.all(
         clothingCategories.map((cat) =>
           fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
         )
       );
 
-      const arrivalsResponses = await Promise.all(
-        arrivalsCategories.map((cat) =>
-          fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
-        )
-      );
-
-      const sellingResponses = await Promise.all(
-        topSellingCategories.map((cat) =>
-          fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
-        )
-      );
-
       const allClothes = responses.flatMap((r) => r.products);
-      const allArrivalsClothes = arrivalsResponses.flatMap((r) => r.products);
-      const allSellingClothes = sellingResponses.flatMap((r) => r.products);
+      const seed = getDailySeed();
+
+      // shuffle the full list with today's seed
+      const shuffled = seededShuffle(allClothes, seed);
+
+      // slice different portions for each section
+      const arrivals = shuffled.slice(0, 20);
+      const selling = shuffled.slice(20, 40);
 
       setAllProducts(allClothes);
-      setNewArrivals(allArrivalsClothes);
-      setTopSelling(allSellingClothes);
+      setNewArrivals(arrivals);
+      setTopSelling(selling);
       setIsLoading(false);
     };
     fetchProducts();
@@ -176,10 +149,9 @@ export default function Home() {
       );
     }
   }, [sellingProducts]);
- 
   
   return (
-    <div className="max-w-360 w-full flex flex-col">
+    <main className="max-w-360 w-full flex flex-col">
 
       <section className="bg-[#F2F0F1] lg:h-165.75 flex flex-col lg:flex-row items-center px-7 pt-10 lg:py-10 lg:px-25 overflow-hidden">
         <div className="flex flex-col items-center gap-4 lg:items-start lg:gap-4">
@@ -340,7 +312,7 @@ export default function Home() {
           }
         </div>
 
-        <button className="border border-black/10 py-4 w-full h-11.5 lg:w-54.5 lg:h-13 rounded-[62px] flex items-center justify-center hover:bg-black/10 transition-colors duration-300">
+        <button onClick={() => router.push("/arrivals")} className="border border-black/10 py-4 w-full h-11.5 lg:w-54.5 lg:h-13 rounded-[62px] flex items-center justify-center hover:bg-black/10 transition-colors duration-300">
           <p className="font-medium text-sm lg:text-base">View All</p>
         </button>
       </section>
@@ -503,9 +475,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
-
-    </div>
+    </main>
   )
 }
