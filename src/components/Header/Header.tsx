@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -12,6 +12,8 @@ export default function Header() {
     const [searchOpen, setSearchOpen] = useState(false);
     const [shopOpen, setShopOpen] = useState(false);
     const [search, setSearch] = useState("")
+    const [searchResults, setSearchResults] = useState<any[]>([])
+    const [allProducts, setAllProducts] = useState<any[]>([])
     const router = useRouter()
     const { state } = useApp();
     const cartCount = state.cart.reduce((total, item) => total + item.quantity, 0);
@@ -21,6 +23,34 @@ export default function Header() {
         { label: "Pants", href: "/pant" },
         { label: "Shorts", href: "/shorts" },
     ]
+
+    useEffect(() => {
+        const fetchAll = async () => {
+            const categories = [
+            "womens-dresses", "mens-shirts", "tops", "womens-shoes",
+            "mens-shoes", "womens-bags", "womens-jewellery", "sunglasses",
+            ];
+            const responses = await Promise.all(
+            categories.map((cat) =>
+                fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
+            )
+            );
+            setAllProducts(responses.flatMap((r) => r.products));
+        };
+        fetchAll();
+    }, []);
+
+    useEffect(() => {
+        if (!search.trim()) {
+            setSearchResults([]);
+            return;
+        }
+        const results = allProducts
+            .filter((p) => p.title.toLowerCase().includes(search.toLowerCase()))
+            .slice(0, 6);
+        setSearchResults(results);
+    }, [search, allProducts]);
+
     return (
         <header className="max-w-360 w-full px-7 py-5 lg:py-7 lg:px-25 sticky top-0 z-30 bg-white border-b border-black/10">
             {/* Large screen */}
@@ -86,10 +116,36 @@ export default function Header() {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
+                    <AnimatePresence>
+                        {searchResults.length > 0 && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -8 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute top-26 left-0 right-0 bg-white rounded-2xl shadow-lg border border-black/10 overflow-hidden z-50"
+                        >
+                            {searchResults.map((product) => (
+                            <Link
+                                key={product.id}
+                                href={`/arrivals/${product.id}`}
+                                onClick={() => { setSearch(""); setSearchResults([]); }}
+                                className="flex items-center gap-3 px-4 py-3 hover:bg-[#F0F0F0] transition-colors"
+                            >
+                                <img src={product.thumbnail} alt={product.title} className="w-10 h-10 object-contain rounded-lg bg-[#F0EEED]" />
+                                <div className="flex flex-col">
+                                <p className="text-sm font-medium line-clamp-1">{product.title}</p>
+                                <p className="text-xs text-black/60">${product.price}</p>
+                                </div>
+                            </Link>
+                            ))}
+                        </motion.div>
+                        )}
+                    </AnimatePresence>
                 </div> 
 
                 <div className="flex items-center gap-3.5">
-                    <button className="relative">
+                    <button onClick={() => router.push("/cart")} className="relative">
                         <Icon icon="mdi:cart-outline" width="24" height="24" color="black" />
                         {cartCount > 0 && (
                             <span className="absolute -top-1 -right-1 w-4 h-4 bg-black text-white text-[10px] font-bold rounded-full flex items-center justify-center">
@@ -126,11 +182,11 @@ export default function Header() {
                             <Icon icon="cuida:search-outline" width="24" height="24" color="black" />
                         </button>
 
-                        <button className="relative">
+                        <button onClick={() => router.push("/cart")} className="relative">
                             <Icon icon="mdi:cart-outline" width="24" height="24" color="black" />
                             {cartCount > 0 && (
                                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-black text-white text-[10px] font-bold rounded-full flex items-center justify-center">
-                                {cartCount}
+                                    {cartCount}
                                 </span>
                             )}
                         </button>
@@ -143,28 +199,54 @@ export default function Header() {
                     {/* Expanding Search Bar */}
                     <AnimatePresence>
                         {searchOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.25, ease: "easeInOut" }}
-                            className="absolute left-0 right-0 top-full z-40 bg-white px-4 py-3 shadow-md"
-                        >
-                            <div className="bg-[#F0F0F0] flex items-center gap-3 px-4 py-3 rounded-full">
-                            <Icon icon="cuida:search-outline" width="20" height="20" color="black" />
-                            <input
-                                autoFocus
-                                className="focus:outline-none text-sm w-full bg-transparent"
-                                type="search"
-                                placeholder="Search for products..."
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                            />
-                            <button onClick={() => setSearchOpen(false)}>
-                                <Icon icon="ic:baseline-close" width="18" height="18" color="black" />
-                            </button>
-                            </div>
-                        </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.25, ease: "easeInOut" }}
+                                className="absolute left-0 right-0 top-full z-40 bg-white px-4 py-3 shadow-md"
+                            >
+                                <div className="bg-[#F0F0F0] flex items-center gap-3 px-4 py-3 rounded-full">
+                                    <Icon icon="cuida:search-outline" width="20" height="20" color="black" />
+                                    <input
+                                        autoFocus
+                                        className="focus:outline-none text-sm w-full bg-transparent"
+                                        type="search"
+                                        placeholder="Search for products..."
+                                        value={search}
+                                        onChange={(e) => setSearch(e.target.value)}
+                                    />
+                                    <AnimatePresence>
+                                        {searchResults.length > 0 && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -8 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute top-14 left-0 right-0 bg-white rounded-2xl shadow-lg border border-black/10 overflow-hidden z-50"
+                                        >
+                                            {searchResults.map((product) => (
+                                            <Link
+                                                key={product.id}
+                                                href={`/arrivals/${product.id}`}
+                                                onClick={() => { setSearch(""); setSearchResults([]); }}
+                                                className="flex items-center gap-3 px-4 py-3 hover:bg-[#F0F0F0] transition-colors"
+                                            >
+                                                <img src={product.thumbnail} alt={product.title} className="w-10 h-10 object-contain rounded-lg bg-[#F0EEED]" />
+                                                <div className="flex flex-col">
+                                                <p className="text-sm font-medium line-clamp-1">{product.title}</p>
+                                                <p className="text-xs text-black/60">${product.price}</p>
+                                                </div>
+                                            </Link>
+                                            ))}
+                                        </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                    <button onClick={() => setSearchOpen(false)}>
+                                        <Icon icon="ic:baseline-close" width="18" height="18" color="black" />
+                                    </button>
+                                </div>
+                            </motion.div>
                         )}
                     </AnimatePresence>
                 </div>

@@ -5,6 +5,8 @@ import { useApp } from '@/context/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PriceRange } from "../UI/PriceTracker";
 
+type FilterCategory = { label: string; value: string };
+
 const categories = [
     { label: "All Clothes", value: "" },
     { label: "Tops", value: "tops" },
@@ -13,9 +15,16 @@ const categories = [
 ];
 
 export default function Filter({
-    onApply
+    onApply,
+    categories = [ 
+        { label: "All Clothes", value: "" },
+        { label: "Tops", value: "tops" },
+        { label: "Mens Shirts", value: "mens-shirts" },
+        { label: "Womens Dresses", value: "womens-dresses" },
+    ],
 }: {
-    onApply?: () => void
+    onApply?: () => void;
+    categories?: FilterCategory[];
 }) {
     const { state, dispatch } = useApp()
     const [isClothesOpen, setIsClothesOpen] = useState(true);

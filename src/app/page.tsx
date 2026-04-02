@@ -418,10 +418,30 @@ export default function Home() {
 
         <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-8 w-full">
           {[
-            { label: "Casual", img: "/images/casual.png", size: "w-full sm:w-101.75", href: "/category/casual" },
-            { label: "Formal", img: "/images/formal.png", size: "w-full sm:w-171",    href: "/category/formal" },
-            { label: "Party",  img: "/images/party.png",  size: "w-full sm:w-171",    href: "/category/party"  },
-            { label: "Gym",    img: "/images/gym.png",    size: "w-full sm:w-101.75", href: "/category/gym"    },
+            {
+              label: "Casual",
+              img: "/images/casual.png",
+              size: "w-full sm:w-101.75",
+              href: "/category/tops",        
+            },
+            {
+              label: "Formal",
+              img: "/images/formal.png",
+              size: "w-full sm:w-171",
+              href: "/category/mens-shirts"
+            },
+            {
+              label: "Party",
+              img: "/images/party.png",
+              size: "w-full sm:w-171",
+              href: "/category/womens-dresses",
+            },
+            {
+              label: "Gym",
+              img: "/images/gym.png",
+              size: "w-full sm:w-101.75",
+              href: "/category/womens-shoes", 
+            },
           ].map(({ label, img, size, href }) => (
             <Link key={label} href={href} className={`relative h-72.25 ${size} rounded-[20px] overflow-hidden cursor-pointer block`}>
               <motion.div

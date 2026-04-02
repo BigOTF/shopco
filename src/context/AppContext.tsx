@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useReducer, ReactNode } from "react";
+import { createContext, useContext, useReducer, ReactNode, useEffect } from "react";
 
 export type FilterState = {
   category: string; 
@@ -18,6 +18,7 @@ export type CartItem = {
   price: number;
   thumbnail: string;
   quantity: number;
+  discountPercentage: number
 };
 
 type AppState = {
@@ -58,7 +59,9 @@ const initialFilterState: FilterState = {
 
 const initialState: AppState = {
   filter: initialFilterState,
-  cart: [],
+  cart: typeof window !== "undefined"
+    ? JSON.parse(localStorage.getItem("cart") ?? "[]")
+    : [],
 };
 
 const appReducer = (state: AppState, action: Action): AppState => {
@@ -139,6 +142,11 @@ const AppContext = createContext<ContextType | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
+  
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(state.cart));
+  }, [state.cart]);
+  
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}

@@ -64,9 +64,10 @@ const getDailySeed = () => {
 type Props = {
     backHref: string;
     backLabel: string;
+    relatedCategories: string[]
 };
 
-export default function ProductDetailPage({ backHref, backLabel }: Props) {
+export default function ProductDetailPage({ backHref, backLabel, relatedCategories }: Props) {
     const params = useParams();
     const id = params.id;
     const { dispatch, state } = useApp();
@@ -134,20 +135,10 @@ export default function ProductDetailPage({ backHref, backLabel }: Props) {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const clothingCategories = [
-                "womens-dresses",
-                "mens-shirts",
-                "tops",
-                "womens-shoes",
-                "mens-shoes",
-                "womens-bags",
-                "womens-jewellery",
-                "sunglasses",
-            ];
             const responses = await Promise.all(
-                clothingCategories.map((cat) =>
-                    fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
-                )
+            relatedCategories.map((cat) =>
+                fetch(`https://dummyjson.com/products/category/${cat}`).then((r) => r.json())
+            )
             );
             const allClothes = responses.flatMap((r) => r.products);
             const seed = getDailySeed();
@@ -260,53 +251,61 @@ export default function ProductDetailPage({ backHref, backLabel }: Props) {
                     </div>
 
                     <div className="flex flex-col gap-6 lg:gap-10">
-                        <div className="flex flex-col gap-2">
-                            <p className="font-bebas font-bold text-2xl lg:text-[40px] tracking-[0%]">{product?.title}</p>
-                            {product && <StarRating rating={product.rating} />}
-                            {product && (
-                                <div className="flex items-center gap-2.5 lg:gap-3">
-                                    <p className="font-bold text-2xl lg:text-[32px]">${product.price}</p>
-                                    <p className="font-bold text-2xl lg:text-[32px] text-black/40 line-through">${originalPrice}</p>
-                                    {product.discountPercentage > 0 && (
-                                        <span className="w-15.5 h-7.75 lg:w-18 lg:h-8.5 py-1.5 rounded-[62px] flex items-center justify-center bg-[#FF3333]/10 font-medium text-sm lg:text-base text-[#FF3333]">
-                                            -{Math.round(product.discountPercentage)}%
-                                        </span>
-                                    )}
-                                </div>
-                            )}
-                            <p className="text-sm lg:text-base text-black/60">{product?.description}</p>
-                        </div>
+                        {!product ? (
+                            <div className="flex flex-col gap-4">
+                            <Skeleton width="70%" height={40} borderRadius={8} baseColor="#F0EEED" highlightColor="#e0dedd" />
+                            <Skeleton width="40%" height={20} borderRadius={8} baseColor="#F0EEED" highlightColor="#e0dedd" />
+                            <Skeleton width="50%" height={32} borderRadius={8} baseColor="#F0EEED" highlightColor="#e0dedd" />
+                            <Skeleton count={3} height={16} borderRadius={8} baseColor="#F0EEED" highlightColor="#e0dedd" />
+                            </div>
+                        ) : (
+                            <div className="flex flex-col gap-2">
+                            <p className="font-bebas font-bold text-2xl lg:text-[40px] tracking-[0%]">{product.title}</p>
+                            <StarRating rating={product.rating} />
+                            <div className="flex items-center gap-2.5 lg:gap-3">
+                                <p className="font-bold text-2xl lg:text-[32px]">${product.price}</p>
+                                <p className="font-bold text-2xl lg:text-[32px] text-black/40 line-through">${originalPrice}</p>
+                                {product.discountPercentage > 0 && (
+                                <span className="w-15.5 h-7.75 lg:w-18 lg:h-8.5 py-1.5 rounded-[62px] flex items-center justify-center bg-[#FF3333]/10 font-medium text-sm lg:text-base text-[#FF3333]">
+                                    -{Math.round(product.discountPercentage)}%
+                                </span>
+                                )}
+                            </div>
+                            <p className="text-sm lg:text-base text-black/60">{product.description}</p>
+                            </div>
+                        )}
 
                         <div className="border border-black/10" />
 
                         <div className="flex items-center gap-3">
                             <div className="bg-[#F0F0F0] w-27.5 h-11 px-4 py-3 lg:w-42.5 lg:h-13 lg:px-5 lg:py-4 rounded-[62px] flex items-center justify-between">
-                                <button onClick={() => setQuantity((q) => Math.max(1, q - 1))} className="w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center">
-                                    <Icon icon="ic:round-minus" width="24" height="24" color="black" />
-                                </button>
-                                <p className="font-medium text-sm lg:text-base">{quantity}</p>
-                                <button onClick={() => setQuantity((q) => q + 1)} className="w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center">
-                                    <Icon icon="ic:round-plus" width="24" height="24" color="black" />
-                                </button>
+                            <button onClick={() => setQuantity((q) => Math.max(1, q - 1))} className="w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center">
+                                <Icon icon="ic:round-minus" width="24" height="24" color="black" />
+                            </button>
+                            <p className="font-medium text-sm lg:text-base">{quantity}</p>
+                            <button onClick={() => setQuantity((q) => q + 1)} className="w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center">
+                                <Icon icon="ic:round-plus" width="24" height="24" color="black" />
+                            </button>
                             </div>
 
                             <button
-                                onClick={() => {
-                                    if (!product) return;
-                                    dispatch({
-                                        type: "ADD_TO_CART",
-                                        payload: {
-                                            id: product.id,
-                                            title: product.title,
-                                            price: product.price,
-                                            thumbnail: product.thumbnail,
-                                            quantity,
-                                        },
-                                    });
-                                }}
-                                className="w-59 h-11 lg:w-100 lg:h-13 px-13.5 py-4 rounded-[62px] bg-black text-white flex items-center justify-center"
+                            onClick={() => {
+                                if (!product) return;
+                                dispatch({
+                                type: "ADD_TO_CART",
+                                payload: {
+                                    id: product.id,
+                                    title: product.title,
+                                    price: product.price,
+                                    thumbnail: product.thumbnail,
+                                    quantity,
+                                    discountPercentage: product.discountPercentage,
+                                },
+                                });
+                            }}
+                            className="w-59 h-11 lg:w-100 lg:h-13 px-13.5 py-4 rounded-[62px] bg-black text-white flex items-center justify-center"
                             >
-                                <p className="font-medium text-sm lg:text-base">Add to Cart</p>
+                            <p className="font-medium text-sm lg:text-base">Add to Cart</p>
                             </button>
                         </div>
                     </div>

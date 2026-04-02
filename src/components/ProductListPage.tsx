@@ -28,6 +28,7 @@ type Props = {
   isLoading: boolean;
   currentPage: number;
   setCurrentPage: (page: number | ((p: number) => number)) => void;
+  filterCategories?: { label: string; value: string }[]
 };
 
 export default function ProductListPage({
@@ -39,6 +40,7 @@ export default function ProductListPage({
   isLoading,
   currentPage,
   setCurrentPage,
+  filterCategories,
 }: Props) {
   const { state, dispatch } = useApp();
   const [isSortOpen, setIsSortOpen] = useState(false);
@@ -84,7 +86,7 @@ export default function ProductListPage({
 
       <section className="px-7 py-10 lg:pt-6 lg:px-25 flex gap-7">
         <aside className="w-73.75 hidden lg:flex">
-          <Filter />
+          <Filter categories={filterCategories} />
         </aside>
 
         <main className="flex-1">
