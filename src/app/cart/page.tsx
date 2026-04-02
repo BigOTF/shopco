@@ -69,11 +69,11 @@ export default function Cart() {
                                     </button>
                                 
                                 </div>
-                                
+
                                 <div className="flex justify-between">
                                     <p className="font-bold text-xl lg:text-2xl">${item.price}</p>
 
-                                    <div className="bg-[#F0F0F0] text-black h-7.75 lg:w-31.5 lg:h-11 px-5 py-3.5 lg:py-3 rounded-[62px] flex items-center gap-5">
+                                    <div className="bg-[#F0F0F0] text-black h-7.75 lg:w-31.5 lg:h-11 px-3 lg:px-5 py-3.5 lg:py-3 rounded-[62px] flex items-center gap-5">
                                         <button onClick={() => dispatch({ type: "DECREMENT_QUANTITY", payload: item.id })}>
                                             <Icon icon="ic:round-minus" width="24" height="24" color="black" />
                                         </button>

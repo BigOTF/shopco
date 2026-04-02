@@ -19,9 +19,12 @@ export default function Header() {
     const cartCount = state.cart.reduce((total, item) => total + item.quantity, 0);
 
     const shopItems = [
-        { label: "Shirt", href: "/shirt" },
-        { label: "Pants", href: "/pant" },
-        { label: "Shorts", href: "/shorts" },
+        { label: "New Arrivals", href: "/arrivals" },
+        { label: "Top Selling", href: "/topSelling" },
+        { label: "Casual",  href: "/category/tops" },
+        { label: "Formal",  href: "/category/mens-shirts" },
+        { label: "Party",   href: "/category/womens-dresses" },
+        { label: "Gym",     href: "/category/womens-shoes" },
     ]
 
     useEffect(() => {

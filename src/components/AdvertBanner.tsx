@@ -23,7 +23,7 @@ export default function AdvertBanner() {
           className="overflow-hidden bg-black text-white w-full h-9.5"
         >
           <div className="flex items-center justify-center relative py-2.25">
-            <p className="text-sm">
+            <p className="text-xs lg:text-sm">
               Sign up and get 20% off to your first order.{" "}
               <span className="underline cursor-pointer font-medium">
                 <Link href="/">Sign Up Now</Link>
