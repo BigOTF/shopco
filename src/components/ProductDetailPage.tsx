@@ -168,14 +168,14 @@ export default function ProductDetailPage({ backHref, backLabel, relatedCategori
 
             <nav aria-label="breadcrumb" className="flex items-center gap-1.5 lg:gap-3 px-7 pt-6 lg:px-25">
                 <Link href="/" className="flex items-center gap-1">
-                    <p className="text-sm lg:text-base text-black/60">Home</p>
+                    <p className="text-sm lg:text-base text-black/60 text-nowrap">Home</p>
                     <Icon icon="weui:arrow-filled" width="12" height="24" className="text-black/60" />
                 </Link>
                 <Link href={backHref} className="flex items-center gap-1">
-                    <p className="text-sm lg:text-base text-black/60">{backLabel}</p>
+                    <p className="text-sm lg:text-base text-black/60 text-nowrap">{backLabel}</p>
                     <Icon icon="weui:arrow-filled" width="12" height="24" className="text-black/60" />
                 </Link>
-                <p className="text-sm lg:text-base">{product?.title}</p>
+                <p className="text-sm lg:text-base text-nowrap">{product?.title}</p>
             </nav>
 
             <main className="px-7 py-10 lg:pt-6 lg:px-25 flex flex-col gap-10">

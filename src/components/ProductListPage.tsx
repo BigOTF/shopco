@@ -78,10 +78,10 @@ export default function ProductListPage({
 
       <nav aria-label="breadcrumb" className="flex items-center gap-1.5 lg:gap-3 px-7 pt-6 lg:px-25">
         <Link href="/" className="flex items-center gap-1">
-          <p className="text-sm lg:text-base text-black/60">Home</p>
+          <p className="text-sm lg:text-base text-black/60 text-nowrap">Home</p>
           <Icon icon="weui:arrow-filled" width="12" height="24" className="text-black/60" />
         </Link>
-        <p className="text-sm lg:text-base">{breadcrumb}</p>
+        <p className="text-sm lg:text-base text-nowrap">{breadcrumb}</p>
       </nav>
 
       <section className="px-7 py-10 lg:pt-6 lg:px-25 flex gap-7">
@@ -191,14 +191,16 @@ export default function ProductListPage({
                           <div className="flex flex-col gap-2">
                             <p className="text-base lg:text-xl font-bold line-clamp-1">{product.title}</p>
                             <StarRating rating={product.rating} />
-                            <div className="flex items-center gap-1.25 lg:gap-2.5">
+                            <div className="flex flex-col gap-1.25 lg:gap-2.5">
                               <p className="font-bold text-xl lg:text-2xl">${product.price}</p>
-                              <p className="font-bold text-xl lg:text-2xl text-black/40 line-through">${originalPrice}</p>
-                              {product.discountPercentage > 0 && (
-                                <span className="w-10.5 h-5 lg:w-14.5 lg:h-7 py-1.5 rounded-[62px] flex items-center justify-center bg-[#FF3333]/10 font-medium text-[10px] lg:text-xs text-[#FF3333]">
-                                  -{Math.round(product.discountPercentage)}%
-                                </span>
-                              )}
+                              <div className="flex items-center gap-1.25 lg:gap-2.5">
+                                <p className="font-bold text-xl lg:text-2xl text-black/40 line-through">${originalPrice}</p>
+                                {product.discountPercentage > 0 && (
+                                  <span className="w-10.5 h-5 lg:w-14.5 lg:h-7 py-1.5 rounded-[62px] flex items-center justify-center bg-[#FF3333]/10 font-medium text-[10px] lg:text-xs text-[#FF3333]">
+                                    -{Math.round(product.discountPercentage)}%
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           </div>
                         </Link>

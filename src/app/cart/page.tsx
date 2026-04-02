@@ -50,37 +50,39 @@ export default function Cart() {
                         <div key={item.id} className="w-full p-3.5 lg:px-6 lg:py-5 flex flex-col gap-4 lg:gap-6 rounded-[20px] border border-black/10">
                         <div className="flex gap-3.5 lg:gap-4">
                             <div className="bg-[#F0EEED] w-24.75 h-24.75 lg:w-31 lg:h-31 rounded-[8.66px] flex items-center justify-center overflow-hidden shrink-0">
-                            <img
-                                src={item.thumbnail}
-                                alt={item.title}
-                                className="w-full h-full object-contain transition-transform duration-500 ease-in-out hover:scale-110 cursor-pointer"
-                            />
+                                <img
+                                    src={item.thumbnail}
+                                    alt={item.title}
+                                    className="w-full h-full object-contain transition-transform duration-500 ease-in-out hover:scale-110 cursor-pointer"
+                                />
                             </div>
 
-                            <div className="flex justify-between w-full">
-                            <div className="flex flex-col justify-between">
-                                <p className="font-bold text-base lg:text-xl">{item.title}</p>
-                                <p className="font-bold text-xl lg:text-2xl">${item.price}</p>
-                            </div>
+                            <div className="flex flex-col justify-between w-full">
+                                <div className="flex items-start justify-between">
+                                    <p className="font-bold text-base lg:text-xl">{item.title}</p>
 
-                            <div className="flex flex-col items-end justify-between">
-                                <button
-                                onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: item.id })}
-                                className="w-6 h-6 flex items-center justify-center"
-                                >
-                                <Icon icon="mdi:delete" width="24" height="24" color="#FF3333" />
-                                </button>
-
-                                <div className="bg-[#F0F0F0] text-black h-7.75 lg:w-31.5 lg:h-11 px-5 py-3.5 lg:py-3 rounded-[62px] flex items-center gap-5">
-                                <button onClick={() => dispatch({ type: "DECREMENT_QUANTITY", payload: item.id })}>
-                                    <Icon icon="ic:round-minus" width="24" height="24" color="black" />
-                                </button>
-                                <span className="font-medium text-sm">{item.quantity}</span>
-                                <button onClick={() => dispatch({ type: "INCREMENT_QUANTITY", payload: item.id })}>
-                                    <Icon icon="ic:round-plus" width="24" height="24" color="black" />
-                                </button>
+                                    <button
+                                        onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: item.id })}
+                                        className="w-6 h-6 flex items-center justify-center"
+                                    >
+                                        <Icon icon="mdi:delete" width="24" height="24" color="#FF3333" />
+                                    </button>
+                                
                                 </div>
-                            </div>
+                                
+                                <div className="flex justify-between">
+                                    <p className="font-bold text-xl lg:text-2xl">${item.price}</p>
+
+                                    <div className="bg-[#F0F0F0] text-black h-7.75 lg:w-31.5 lg:h-11 px-5 py-3.5 lg:py-3 rounded-[62px] flex items-center gap-5">
+                                        <button onClick={() => dispatch({ type: "DECREMENT_QUANTITY", payload: item.id })}>
+                                            <Icon icon="ic:round-minus" width="24" height="24" color="black" />
+                                        </button>
+                                        <span className="font-medium text-sm">{item.quantity}</span>
+                                        <button onClick={() => dispatch({ type: "INCREMENT_QUANTITY", payload: item.id })}>
+                                            <Icon icon="ic:round-plus" width="24" height="24" color="black" />
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         </div>
